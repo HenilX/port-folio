@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: .5rem;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+  --tw-ring-color: rgb(59 130 246 / .5);
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  line-height: inherit;
+  color: hsl(var(--foreground));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: hsl(var(--border));
+  outline-color: hsl(var(--ring) / .5);
+}
+
+:root {
+  --accent: #2563eb;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  @apply bg-white text-slate-900 antialiased leading-relaxed;
+}
+
+.btn-primary{
+  @apply px-4 py-2 rounded-md text-white font-medium bg-gradient-to-r from-sky-500 to-indigo-600 shadow-md;
+}
+
+.card {
+  @apply bg-white border border-slate-100 rounded-lg overflow-hidden shadow-sm;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Reveal on scroll */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  transition: opacity 700ms cubic-bezier(.2,.8,.2,1), transform 700ms cubic-bezier(.2,.8,.2,1);
+  will-change: transform, opacity;
+}
+.reveal.in-view{
+  opacity: 1;
+  transform: none;
+}
+
+/* Section title style */
+.section-title{
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Slightly larger container spacing on wide screens */
+@media (min-width: 1024px){
+  .container{ max-width: 880px }
+}
+
+/* Dark patterned background and subtle center glow */
+body {
+  background-color: transparent;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+/* Ensure content sits above background overlay */
+.container, header, main, footer, .card { position: relative; z-index: 10 }
+
+/* Hero specifics */
+.hero-wrap{ min-height: 72vh; display:flex; align-items:center; justify-content:center; }
+.hero-inner{ text-align: center; }
+.hero-badge{
+  display: inline-flex; gap:0.6rem; align-items:center; padding:0.5rem 1rem; background: rgba(255,255,255,0.03); border-radius:9999px; border:1px solid rgba(255,255,255,0.03); color:#c6d1db; font-size:0.9rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.hero-badge .dot{ width:0.6rem; height:0.6rem; background:#10b981; border-radius:9999px; box-shadow:0 0 6px rgba(16,185,129,0.25)}
+
+.hero-title { color: #fff; font-weight: 800; line-height: 0.95 }
+.hero-sub { color: rgba(255,255,255,0.65); margin-top:1rem; max-width:760px; margin-left:auto; margin-right:auto; }
+
+.name-gradient{
+  background: linear-gradient(90deg,#60a5fa 0%, #a78bfa 45%, #f472b6 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.cta-row{ display:flex; gap:1rem; justify-content:center; margin-top:2rem }
+.pill-white{ background:#fff; color:#061226; padding:0.9rem 2.2rem; border-radius:9999px; font-weight:600; box-shadow: 0 8px 30px rgba(2,6,23,0.45) }
+.pill-ghost{ border:1px solid rgba(255,255,255,0.14); color:#fff; padding:0.9rem 2.2rem; border-radius:9999px }
+
+.social-row{ display:flex; gap:1rem; justify-content:center; margin-top:1.5rem }
+.social-btn{ width:44px; height:44px; border-radius:9999px; display:inline-flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); color:rgba(255,255,255,0.8) }
+
+/* Bounce animation for scroll arrow */
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.scroll-arrow{ margin-top:3.5rem; display:flex; justify-content:center; }
+.scroll-arrow .circle{ width:44px; height:44px; border-radius:9999px; border:1px solid rgb(255, 255, 255); display:inline-flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.8); animation: bounce-arrow 2s ease-in-out infinite; }
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.stagger-item {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
