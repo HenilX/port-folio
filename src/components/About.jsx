@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Coffee, Lightbulb, Rocket } from 'lucide-react';
-import profileImg from '../assets/img.png';
+
 
 
 
@@ -56,7 +56,7 @@ export default function About() {
     <div className="relative z-10 aspect-square rounded-3xl overflow-hidden 
                     bg-gradient-to-br from-slate-100 to-slate-200">
                       
-      <img src= "/port-folio/assets/img.png" alt="Profile" className="w-full h-full object-cover" />
+      <img src= "/port-folio/assets/img.png" alt="Nrofile" className="w-full h-full object-cover" />
      
     </div>
 
