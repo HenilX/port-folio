@@ -57,7 +57,6 @@ export default function About() {
                     bg-gradient-to-br from-slate-100 to-slate-200">
       <img
         src={profileImg} alt="Nrofile"
-        alt="Profile"
         className="w-full h-full object-cover"
       />
     </div>
