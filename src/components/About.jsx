@@ -55,10 +55,7 @@ export default function About() {
     {/* Image Container */}
     <div className="relative z-10 aspect-square rounded-3xl overflow-hidden 
                     bg-gradient-to-br from-slate-100 to-slate-200">
-      <img
-        src={profileImg} alt="Nrofile"
-        className="w-full h-full object-cover"
-      />
+     
     </div>
 
   </div>
