@@ -52,7 +52,7 @@ export default function About() {
     <div className="relative z-10 aspect-square rounded-3xl overflow-hidden 
                     bg-gradient-to-br from-slate-100 to-slate-200">
       <img
-        src="src\assets\img.png"
+        src="src/assets/img.png"
         alt="Profile"
         className="w-full h-full object-cover"
       />
