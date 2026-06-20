@@ -5,7 +5,7 @@ import profileImg from '../assets/img.png';
 
 export default function About() {
   const highlights = [
-    { icon: Code2, label: '1+ Years Experience', color: 'from-blue-500 to-cyan-500' },
+    { icon: Code2, label: '3+ Years Experience', color: 'from-blue-500 to-cyan-500' },
     { icon: Rocket, label: 'Master\'s Graduate', color: 'from-purple-500 to-pink-500' },
     { icon: Coffee, label: 'Teaching Assistant', color: 'from-amber-500 to-orange-500' },
     { icon: Lightbulb, label: 'Always Learning', color: 'from-emerald-500 to-teal-500' },
